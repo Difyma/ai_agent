@@ -1,0 +1,23 @@
+import OpenAI from 'openai';
+
+// Используйте переменные окружения для API ключа
+// В Vercel добавьте VITE_OPENAI_API_KEY в настройках проекта
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY || '';
+
+if (!apiKey) {
+  console.warn('VITE_OPENAI_API_KEY не установлен. Установите переменную окружения в Vercel.');
+}
+
+export const openai = new OpenAI({
+  apiKey: apiKey,
+  dangerouslyAllowBrowser: true, // В продакшене используйте backend proxy
+});
+
+export const AI_CONFIG = {
+  model: 'gpt-4o-mini',
+  maxTokens: 500,
+  temperature: 0.8,
+  top_p: 0.95,
+  frequency_penalty: 0.3,
+  presence_penalty: 0.3,
+};

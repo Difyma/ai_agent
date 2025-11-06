@@ -1,4 +1,3 @@
 build/
 .next/
 workspace/.MGXEnv.json
-workspace/shadcn-ui/src/config/openai.ts
