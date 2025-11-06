@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "workspace/shadcn-ui/dist",
+  "installCommand": "cd workspace/shadcn-ui && npm install",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+

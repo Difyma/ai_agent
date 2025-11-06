@@ -1,0 +1,10 @@
+{
+  "name": "ai-supplements-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd workspace/shadcn-ui && npm install && npm run build",
+    "vercel-build": "cd workspace/shadcn-ui && npm install && npm run build"
+  }
+}
+
